@@ -19,14 +19,14 @@ var currentImage = 0
         super.viewDidLoad()
         
         view.backgroundColor = .systemRed
-        
-        ImageView.frame = view.bounds
-        ImageView.backgroundColor = view.backgroundColor
+        ImageView.frame = CGRect(x: 0, y: 0, width: 400, height: 550)
+        ImageView.center = view.center
         ImageView.image = UIImage(named: Array[currentImage])
-        ImageView.contentMode = .scaleAspectFill
-        
+        ImageView.layer.shadowColor = UIColor.systemBlue.cgColor
+        ImageView.layer.shadowOpacity = 0.5
+        ImageView.layer.shadowRadius = 15
         view.addSubview(ImageView)
- 
+       
         swipe()
 
         }
